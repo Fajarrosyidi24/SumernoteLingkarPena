@@ -1,0 +1,607 @@
+.navbar-brand {
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Jarak antara kolom kiri dan kanan */
+}
+
+.navbar-logo-left img {
+  display: block;
+}
+
+.navbar-info {
+  display: flex;
+  flex-direction: column;
+  /* Konten diatur secara vertikal */
+  align-items: flex-start;
+  /* Menyelaraskan konten ke kiri */
+}
+
+.navbar-info img {
+  margin-bottom: 3px;
+  /* Jarak antara logo kedua dan teks */
+}
+
+.navbar-info .title {
+  font-family: 'Sacramento', cursive;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000000;
+  /* Hijau NU */
+  margin: 0;
+}
+
+.navbar-info .subtitle {
+  font-family: 'Kolektif', sans-serif;
+  font-size: 0.5rem;
+  color: #000000;
+  /* Abu-abu lembut */
+  margin: 0;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ffffff, #a8a8a8);
+  /* Gradasi hijau gelap ke hijau muda */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Shadow untuk memberi efek 3D */
+  animation: slideInDown 0.5s ease-out;
+  transition: all 0.3s ease;
+  /* Transisi saat halaman dimuat */
+  padding: 10px 0;
+  position: fixed;
+  /* Menjadikan navbar tetap di atas saat di-scroll */
+  top: 0;
+  /* Posisi navbar di bagian atas */
+  left: 0;
+  width: 100%;
+  /* Membuat navbar lebar penuh */
+  z-index: 9999;
+  /* Pastikan navbar di atas konten lainnya */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgb(0, 0, 0);
+  /* Warna teks putih agar kontras dengan logo */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  /* Animasi halus */
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover {
+  color: #07e107;
+  /* Teks sedikit lebih terang saat hover */
+}
+
+.navbar .nav-link.active {
+  color: #07e107;
+  /* Teks warna hijau */
+  font-weight: bold;
+  /* Teks menjadi tebal */
+}
+
+
+.form-control {
+  border: 1px solid #07e107;
+  /* Border hijau sesuai dengan logo */
+  border-radius: 5px;
+  /* Opsional, untuk sudut melengkung */
+  transition: all 0.3s ease;
+  /* Animasi halus saat perubahan */
+}
+
+.form-control:focus {
+  border-color: #07e107;
+  /* Warna border saat input di klik/fokus */
+  box-shadow: 0 0 8px rgba(0, 153, 51, 0.5);
+  /* Efek glow hijau lembut */
+  outline: none;
+  /* Menghilangkan outline biru bawaan browser */
+}
+
+.form-control:hover {
+  border-color: #33aa66;
+  /* Warna saat hover */
+}
+
+.btn-outline-success:hover {
+  background-color: #07e107;
+  /* Warna latar belakang hitam saat hover */
+  color: white;
+  /* Warna teks putih untuk kontras */
+  border-color: #07e107;
+  /* Ubah warna border agar sesuai dengan latar belakang */
+  transition: all 0.3s ease;
+  /* Animasi halus untuk transisi */
+}
+
+body {
+  background: linear-gradient(120deg, #ffffff, #a8a8a8);
+  /* Gradasi hijau tua ke hijau muda */
+  min-height: 100vh;
+  /* Pastikan gradasi mencakup seluruh tinggi layar */
+  overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #07e107;
+  /* Warna latar belakang saat hover */
+  color: white;
+  /* Warna teks saat hover */
+  border-radius: 4px;
+  /* Opsional: sudut melengkung untuk estetika */
+}
+
+.nav-item {
+  margin: 0 3px;
+  /* Menambahkan margin kiri dan kanan antar item navbar */
+}
+
+/* Styling Utama untuk Blog */
+#blog {
+  background-color: #f8f9fa; /* Warna latar belakang blog */
+  padding: 50px 0;
+}
+
+#blog h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #07e107; /* Warna biru sesuai tema */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #07e107;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.card-body p:first-of-type {
+  font-weight: bold;
+  color: #07e107;
+}
+
+/* Styling Pagination */
+.pagination .btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .btn-primary {
+  background-color: #07e107;
+  border-color: #07e107;
+  color: #fff;
+}
+
+.pagination .btn-primary:hover {
+  background-color: #1d901d;
+  border-color: #1d901d;
+}
+
+.pagination .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.pagination .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* Alert Box */
+.alert {
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 15px;
+}
+
+.alert-info {
+  background-color: #e9f7fd;
+  color: #1d901d;
+  border: 1px solid #1d901d;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  #blog h2 {
+      font-size: 2rem;
+  }
+
+  .card img {
+      height: 150px;
+  }
+
+  .pagination .btn {
+      padding: 8px 15px;
+      font-size: 0.8rem;
+  }
+}
+
+
+
+/* Styling untuk container gambar */
+.image-container {
+  position: relative;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Styling gambar agar lebih menarik */
+.image-container img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+  width: 40%;
+  height: auto;
+}
+
+/* Efek hover pada gambar */
+.image-container:hover img {
+  transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Membuat bayangan lebih tebal */
+}
+
+
+#about-us, #visi-misi, #struktur-organisasi, #contact{
+  padding-top: 150px; /* Menyesuaikan dengan tinggi navbar agar konten tidak tertutup */
+  padding-bottom: 30px;
+}
+
+#RegisterForm {
+  padding-top: 150px;
+  padding-bottom: 60px;
+}
+
+#visi-misi h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+#visi-misi ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+#visi-misi img {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+#struktur-organisasi h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#struktur-organisasi h3 {
+  font-size: 2rem;
+  color: #07e107;
+}
+
+#struktur-organisasi h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+#struktur-organisasi p {
+  font-size: 1rem;
+  margin: 0;
+  color: #666;
+}
+
+#struktur-organisasi div.mb-3 {
+  border-left: 4px solid #07e107;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer container */
+footer {
+  background-color: #1a202c; /* Gray-900 */
+  color: #ffffff; /* White */
+  padding: 2rem 1rem; /* Padding for top and bottom */
+  font-family: 'Arial', sans-serif; /* Default font */
+  border-top: 4px solid #2d3748; /* Top border for accent */
+}
+
+/* Flexbox styling */
+footer .container {
+  display: flex;
+  flex-direction: column; /* Default vertical stacking */
+  gap: 2rem;
+}
+
+footer h2 {
+  font-size: 1.25rem; /* Larger heading */
+  font-weight: 700; /* Bold headings */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4a5568; /* Underline heading */
+  padding-bottom: 0.5rem;
+}
+
+footer p,
+footer li {
+  font-size: 0.875rem; /* Smaller body text */
+  line-height: 1.5; /* Better readability */
+  color: #a0aec0; /* Gray-500 */
+}
+
+/* Links styling */
+footer a {
+  color: #edf2f7; /* Gray-200 */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+footer a:hover {
+  color: #63b3ed; /* Blue-400 */
+}
+
+/* Media Social Styling */
+footer .flex a {
+  display: inline-block;
+  color: #ffffff; /* White icon color */
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .flex a:hover {
+  background-color: #63b3ed; /* Blue-400 on hover */
+  color: #ffffff; /* White icon color */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  footer .container {
+    flex-direction: row; /* Horizontal stacking for larger screens */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+  footer h2 {
+    font-size: 1.5rem; /* Larger heading for larger screens */
+  }
+  footer p,
+  footer li {
+    font-size: 1rem; /* Slightly larger text */
+  }
+}
+
+/* Divider Styling */
+footer .border-t {
+  border-top: 1px solid #2d3748; /* Gray-800 */
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Footer Bottom Text */
+footer .text-center {
+  font-size: 0.875rem; /* Smaller text size */
+  color: #718096; /* Gray-600 */
+}
+
+/* Accessibility Focus Styling */
+footer a:focus {
+  outline: 2px dashed #63b3ed; /* Blue-400 focus outline */
+  outline-offset: 2px; /* Space between outline and element */
+}
+
+/* Current Year Styling */
+footer #currentYear {
+  font-weight: 700; /* Bold year */
+  color: #63b3ed; /* Blue-400 */
+}
+
+/* Styling dasar untuk checkbox */
+.form-check-input {
+  width: 1.25rem; /* Ukuran checkbox */
+  height: 1.25rem;
+  border: 2px solid #d1d5db; /* Border abu-abu */
+  border-radius: 0.375rem; /* Membulat */
+  background-color: #ffffff; /* Background putih */
+  cursor: pointer; /* Menunjukkan dapat diklik */
+  appearance: none; /* Menghapus gaya bawaan browser */
+  outline: none; /* Hilangkan garis fokus default */
+  transition: background-color 0.3s, border-color 0.3s; /* Animasi */
+}
+
+/* Warna hijau saat dicentang */
+.form-check-input:checked {
+  background-color: #16a34a; /* Hijau */
+  border-color: #16a34a; /* Hijau */
+}
+
+/* Lingkaran fokus hijau */
+.form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.5); /* Hijau transparan */
+}
+
+/* Hover efek */
+.form-check-input:hover {
+  border-color: #9ca3af; /* Sedikit lebih gelap saat hover */
+}
+
+/* Styling untuk label */
+.form-check-label {
+  margin-left: 0.5rem; /* Jarak dari checkbox ke label */
+  font-size: 0.875rem; /* Ukuran font */
+  color: #4b5563; /* Warna teks abu-abu */
+  cursor: pointer; /* Pointer pada label */
+}
+
+/* Warna label saat hover */
+.form-check-label:hover {
+  color: #16a34a; /* Hijau */
+}
+
+/* Styling dasar untuk PrimaryButton */
+.btn-primary {
+  padding: 0.75rem 1.25rem; /* Padding */
+  font-size: 1rem; /* Ukuran font */
+  font-weight: 600; /* Ketebalan font */
+  border-radius: 0.375rem; /* Membulatkan sudut */
+  border: none; /* Menghilangkan border default */
+  cursor: pointer; /* Menunjukkan bisa diklik */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi */
+  text-align: center; /* Teks di tengah */
+}
+
+/* Warna latar belakang hijau (dari kode Anda) */
+.btn-primary {
+  background-color: #07e107;
+  color: white; /* Teks berwarna putih */
+}
+
+/* Efek hover - sedikit gelap saat dihover */
+.btn-primary:hover {
+  background-color: #05c505;
+  transform: scale(1.05); /* Efek sedikit membesar */
+}
+
+/* Efek aktif - sedikit lebih gelap */
+.btn-primary:active {
+  background-color: #048d04;
+  transform: scale(1); /* Kembali ke ukuran normal */
+}
+
+/* Disabled button state */
+.btn-primary:disabled {
+  background-color: #d1d5db; /* Warna abu-abu untuk tombol disabled */
+  cursor: not-allowed; /* Mengubah cursor untuk disabled */
+  opacity: 0.6; /* Memudar tombol */
+}
+
+/* Container utama */
+.dashboard-container {
+  margin: 1rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  padding-top: 100px;
+}
+
+/* Flexbox layout untuk konten */
+.dashboard-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Agar responsif */
+  gap: 1.5rem;
+}
+
+/* Deskripsi teks */
+.dashboard-text {
+  flex: 1 1 60%; /* Ukuran teks 60% pada layar besar */
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.dashboard-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Gambar */
+.dashboard-image-container {
+  flex: 1 1 35%; /* Ukuran gambar 35% pada layar besar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Membuat sudut gambar melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .dashboard-content {
+      flex-direction: column; /* Teks dan gambar vertikal */
+  }
+
+  .dashboard-text {
+      text-align: center; /* Teks rata tengah untuk layar kecil */
+  }
+
+  .dashboard-image-container {
+      margin-top: 1rem;
+  }
+}
+
+.dashboard-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  color: #2a9d8f; /* Warna hijau lembut */
+  text-decoration: underline; /* Menambahkan garis bawah */
+}
+
+.dashboard-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+
+
