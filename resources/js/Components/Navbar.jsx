@@ -71,10 +71,10 @@ function Navbar() {
                                         Article
                                     </a>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">Karya Pelajar</a></li>
-                                        <li><a className="dropdown-item" href="#">Berita</a></li>
-                                        <li><a className="dropdown-item" href="#">Opini</a></li>
-                                        <li><a className="dropdown-item" href="#">Esai</a></li>
+                                        <li><Link className="dropdown-item" href={route('karya-guest')}>Karya Pelajar</Link></li>
+                                        <li><Link className="dropdown-item" href={route('berita-guest')}>Berita</Link></li>
+                                        <li><Link className="dropdown-item" href={route('opini-guest')}>Opini</Link></li>
+                                        <li><Link className="dropdown-item" href={route('esai-guest')}>Esai</Link></li>
                                     </ul>
                                 </li>
 

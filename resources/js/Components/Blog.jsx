@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, usePage } from '@inertiajs/react';
 
-
 function Blog() {
     const { artikels, flash } = usePage().props;
 
@@ -20,12 +19,15 @@ function Blog() {
                             <>
                                 {/* Tampilkan setiap artikel */}
                                 {artikels.data.map((artikel) => (
-                                    <div key={artikel.id} className="col-lg-4 col-md-6 mb-4">
+                                    <div
+                                        key={artikel.id}
+                                        className="col-lg-4 col-md-6 mb-4"
+                                    >
                                         <Link
                                             href={route('DetailBlog', artikel.id)}
                                             className="text-decoration-none text-dark"
                                         >
-                                            <article className="card shadow-sm h-100 border-0">
+                                            <article className="card blog-card shadow-sm h-100 border-0">
                                                 <img
                                                     src={
                                                         artikel.thumbnail
@@ -33,16 +35,20 @@ function Blog() {
                                                             : 'https://via.placeholder.com/350x200?text=No+Image'
                                                     }
                                                     alt={artikel.title}
-                                                    className="img-fluid card-img-top rounded-top"
+                                                    className="img-fluid blog-img rounded-top"
                                                 />
                                                 <div className="card-body">
-                                                    <h3 className="fw-bold text-center">{artikel.title}</h3>
-                                                    <p className="text-center text-muted mb-2">
+                                                    <h3 className="fw-bold text-center blog-title">
+                                                        {artikel.title}
+                                                    </h3>
+                                                    <p className="text-center text-muted blog-author">
                                                         Penulis: {artikel.user?.name}
                                                     </p>
-                                                    <p className="text-center text-muted mb-0">
+                                                    <p className="text-center text-muted blog-date">
                                                         Ditambahkan pada:{' '}
-                                                        {new Date(artikel.created_at).toLocaleDateString()}
+                                                        {new Date(
+                                                            artikel.created_at
+                                                        ).toLocaleDateString()}
                                                     </p>
                                                 </div>
                                             </article>
@@ -55,28 +61,39 @@ function Blog() {
 
                     {/* Navigasi Pagination */}
                     {artikels?.data?.length > 0 && (
-                        <div className="mt-4 d-flex justify-content-center">
+                        <div className="mt-4 d-flex justify-content-center blog-pagination">
                             {/* Tombol First */}
                             {artikels.current_page > 1 && (
-                                <Link href={`${artikels.path}?page=1`} className="btn btn-primary me-2">
+                                <Link
+                                    href={`${artikels.path}?page=1`}
+                                    className="btn btn-primary me-2"
+                                >
                                     First
                                 </Link>
                             )}
 
                             {/* Tombol Previous */}
                             {artikels.prev_page_url && (
-                                <Link href={artikels.prev_page_url} className="btn btn-secondary me-2">
+                                <Link
+                                    href={artikels.prev_page_url}
+                                    className="btn btn-secondary me-2"
+                                >
                                     Previous
                                 </Link>
                             )}
 
                             {/* Tombol Nomor Halaman */}
-                            {Array.from({ length: artikels.last_page }, (_, index) => index + 1).map((page) => (
+                            {Array.from(
+                                { length: artikels.last_page },
+                                (_, index) => index + 1
+                            ).map((page) => (
                                 <Link
                                     key={page}
                                     href={`${artikels.path}?page=${page}`}
                                     className={`btn ${
-                                        page === artikels.current_page ? 'btn-primary' : 'btn-outline-primary'
+                                        page === artikels.current_page
+                                            ? 'btn-primary'
+                                            : 'btn-outline-primary'
                                     } btn-sm me-2`}
                                 >
                                     {page}
@@ -85,7 +102,10 @@ function Blog() {
 
                             {/* Tombol Next */}
                             {artikels.next_page_url && (
-                                <Link href={artikels.next_page_url} className="btn btn-secondary me-2">
+                                <Link
+                                    href={artikels.next_page_url}
+                                    className="btn btn-secondary me-2"
+                                >
                                     Next
                                 </Link>
                             )}

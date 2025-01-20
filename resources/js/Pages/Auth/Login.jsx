@@ -56,6 +56,9 @@ export default function Login({ status, canResetPassword }) {
                                     isFocused={true}
                                     onChange={(e) => setData('email', e.target.value)}
                                 />
+                                {errors.email && (
+                                    <div className="text-danger mt-2">{errors.email}</div>
+                                )}
                             </div>
 
                             {/* Password Input */}
@@ -71,6 +74,9 @@ export default function Login({ status, canResetPassword }) {
                                     autoComplete="current-password"
                                     onChange={(e) => setData('password', e.target.value)}
                                 />
+                                {errors.password && (
+                                    <div className="text-danger mt-2">{errors.password}</div>
+                                )}
                             </div>
 
                             {/* Remember Me Checkbox */}
@@ -98,13 +104,6 @@ export default function Login({ status, canResetPassword }) {
                                         Lupa Kata Sandi?
                                     </Link>
                                 )}
-
-                                {/* <Link
-                                href={route('password.request')}
-                                className="text-sm text-decoration-none" style={{ color: "#07e107" }}
-                                >
-                                    Belum Memiliki Akun?
-                                </Link> */}
 
                                 <PrimaryButton className="btn btn-primary" disabled={processing} style={{background:"#07e107"}}>
                                     Log in

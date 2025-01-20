@@ -20,10 +20,11 @@ function Footer() {
       <div class="flex-1 lg:w-1/4">
         <h2 class="text-lg font-bold mb-4">Navigasi</h2>
         <ul class="space-y-2">
-          <li><a href="/" class="hover:text-gray-300">Beranda</a></li>
-          <li><a href="/about" class="hover:text-gray-300">Tentang Kami</a></li>
-          <li><a href="/services" class="hover:text-gray-300">Layanan</a></li>
-          <li><a href="/contact" class="hover:text-gray-300">Kontak</a></li>
+          <li><Link href={route('welcome')} class="hover:text-gray-300">Beranda</Link></li>
+          <li><Link href={route('about')} class="hover:text-gray-300">Tentang Kami</Link></li>
+          <li><Link href={route('visi-misi')} class="hover:text-gray-300">Visi & Misi</Link></li>
+          <li><Link href={route('struktur-organisasi')} class="hover:text-gray-300">Struktur Organisasi</Link></li>
+          <li><Link href={route('contact')} class="hover:text-gray-300">Kontak</Link></li>
         </ul>
       </div>
       <div class="flex-1 lg:w-1/4">
@@ -31,32 +32,24 @@ function Footer() {
         <ul class="space-y-2 text-sm text-gray-400">
           <li>
             <i class="fas fa-map-marker-alt"></i> 
-            Alamat: Jl. Mawar No.123, Banyuwangi, Jawa Timur
+            Alamat: JL. Jember No.Ruko, Karangharjo, Kecamatan Glenmore, Kabupaten Banyuwangi
           </li>
           <li>
-            <i class="fas fa-phone"></i> 
-            Telepon: <a href="tel:+628123456789" class="hover:text-gray-300">+62 812-3456-789</a>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i> 
-            Email: <a href="email:info@lingkarpenapelajar.com" class="hover:text-gray-300">@gmail.com</a>
-          </li>
+    <i class="fas fa-phone"></i>
+    Telepon: <a href="tel:+6285749731625" class="hover:text-gray-300">+62 857-4973-1625</a>
+</li>
+<li>
+    <i class="fas fa-envelope"></i>
+    Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fajarrosyidi80@gmail.com" class="hover:text-gray-300">fajarrosyidi80@gmail.com</a>
+</li>
+
         </ul>
       </div>
       <div class="flex-1 lg:w-1/4">
         <h2 class="text-lg font-bold mb-4">Ikuti Kami</h2>
         <div class="flex space-x-4">
-          <a href="https://facebook.com" target="_blank" class="hover:text-gray-300">
-            <i class="fab fa-facebook fa-lg"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="hover:text-gray-300">
-            <i class="fab fa-twitter fa-lg"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="hover:text-gray-300">
+          <a href="https://instagram.com/pelajarnu_glenmore" target="_blank" class="hover:text-gray-300">
             <i class="fab fa-instagram fa-lg"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" class="hover:text-gray-300">
-            <i class="fab fa-youtube fa-lg"></i>
           </a>
         </div>
       </div>

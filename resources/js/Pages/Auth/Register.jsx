@@ -38,7 +38,7 @@ export default function Register() {
                         <form onSubmit={submit}>
                             {/* Name Input */}
                             <div className="mb-3">
-                                <InputLabel htmlFor="name" value="Name" className="form-label" />
+                                <InputLabel htmlFor="name" value="Nama" className="form-label" />
                                 <TextInput
                                     id="name"
                                     name="name"
@@ -49,7 +49,7 @@ export default function Register() {
                                     onChange={(e) => setData('name', e.target.value)}
                                     required
                                 />
-                                <InputError message={errors.name} className="mt-2" />
+                                <InputError message={errors.name} className="mt-2 text-danger" />
                             </div>
 
                             {/* Email Input */}
@@ -65,12 +65,12 @@ export default function Register() {
                                     onChange={(e) => setData('email', e.target.value)}
                                     required
                                 />
-                                <InputError message={errors.email} className="mt-2" />
+                                <InputError message={errors.email} className="mt-2 text-danger" />
                             </div>
 
                             {/* Password Input */}
                             <div className="mb-3">
-                                <InputLabel htmlFor="password" value="Password" className="form-label" />
+                                <InputLabel htmlFor="password" value="Kata Sandi" className="form-label" />
                                 <TextInput
                                     id="password"
                                     type="password"
@@ -81,12 +81,12 @@ export default function Register() {
                                     onChange={(e) => setData('password', e.target.value)}
                                     required
                                 />
-                                <InputError message={errors.password} className="mt-2" />
+                                <InputError message={errors.password} className="mt-2 text-danger" />
                             </div>
 
                             {/* Confirm Password Input */}
                             <div className="mb-3">
-                                <InputLabel htmlFor="password_confirmation" value="Confirm Password" className="form-label" />
+                                <InputLabel htmlFor="password_confirmation" value="Konfirmasi Kata Sandi" className="form-label" />
                                 <TextInput
                                     id="password_confirmation"
                                     type="password"
@@ -97,7 +97,7 @@ export default function Register() {
                                     onChange={(e) => setData('password_confirmation', e.target.value)}
                                     required
                                 />
-                                <InputError message={errors.password_confirmation} className="mt-2" />
+                                <InputError message={errors.password_confirmation} className="mt-2 text-danger" />
                             </div>
 
                             {/* Already registered & Submit */}
@@ -111,7 +111,7 @@ export default function Register() {
                                 </Link>
 
                                 <PrimaryButton className="btn btn-primary" disabled={processing} style={{ background: "#07e107" }}>
-                                    Register
+                                    Daftar
                                 </PrimaryButton>
                             </div>
                         </form>

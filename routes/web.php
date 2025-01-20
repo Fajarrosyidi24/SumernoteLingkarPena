@@ -2,7 +2,9 @@
 
 use Inertia\Inertia;
 use App\Models\Artikel;
+use App\Models\Kategori;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\BlogController;
@@ -16,7 +18,8 @@ use App\Http\Controllers\VisiMisiController;
 Route::get('/', function () {
     $artikels = Artikel::with('user')->paginate(12);
     return Inertia::render('Welcome', [
-        'artikels' => $artikels,]);
+        'artikels' => $artikels,
+    ]);
 })->name('welcome');
 
 Route::get('/dashboard', function () {
@@ -58,6 +61,34 @@ Route::get('/struktur-organisasi', [StrukturController::class, 'index'])->name('
 Route::get('/contact', function () {
     return inertia('Contact');
 })->name('contact');
+Route::get('/article/karya-pelajar', function () {
+    $kategori = Kategori::where('slug', 'karya-pelajar')->first();
+    $artikels = Artikel::with('user')->where('kategori_id', $kategori->id)->paginate(12);
+    return inertia('Karya', [
+        'artikels' => $artikels
+    ]);
+})->name('karya-guest');
+Route::get('/article/berita', function () {
+    $kategori = Kategori::where('slug', 'berita')->first();
+    $artikels = Artikel::with('user')->where('kategori_id', $kategori->id)->paginate(12);
+    return inertia('Berita', [
+        'artikels' => $artikels
+    ]);
+})->name('berita-guest');
+Route::get('/article/opini', function () {
+    $kategori = Kategori::where('slug', 'opini')->first();
+    $artikels = Artikel::with('user')->where('kategori_id', $kategori->id)->paginate(12);
+    return inertia('Opini', [
+        'artikels' => $artikels
+    ]);
+})->name('opini-guest');
+Route::get('/article/esai', function () {
+    $kategori = Kategori::where('slug', 'esai')->first();
+    $artikels = Artikel::with('user')->where('kategori_id', $kategori->id)->paginate(12);
+    return inertia('Esai', [
+        'artikels' => $artikels
+    ]);
+})->name('esai-guest');
 Route::post('/contact/submit', [AboutController::class, 'store'])->name('contact.submit');
 
 require __DIR__ . '/auth.php';

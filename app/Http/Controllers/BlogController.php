@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
@@ -37,10 +38,17 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        return Inertia::render('DetailBlog');
+        $artikel = Artikel::with('user')->findOrFail($id);
+        $artikel->url = route('DetailBlog', $id);
+        $url = $artikel->url;
+        return Inertia::render('DetailBlog', [
+            'artikel' => $artikel,
+            'url' => $url,
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.

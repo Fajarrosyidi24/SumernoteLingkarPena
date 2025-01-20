@@ -39,7 +39,7 @@ export default function Welcome() {
                     {/* Section Gambar */}
                     <div className="dashboard-image-container">
                         <img
-                            src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
+                            src="/img/20160328173237_ini-gebrakkan-pengurus-baru-ipnu-dan-ippnu-jogja.jpg"
                             alt="Logo IPNU dan IPPNU"
                             className="dashboard-image"
                         />
@@ -54,7 +54,7 @@ export default function Welcome() {
                     {/* Section Gambar */}
                     <div className="dashboard-image-container left-image">
                         <img
-                            src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
+                            src="/img/Simpel retro media logo.png"
                             alt="Logo Lingkar Pena Pelajar"
                             className="dashboard-image"
                         />

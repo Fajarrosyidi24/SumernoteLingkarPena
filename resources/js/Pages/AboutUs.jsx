@@ -16,7 +16,7 @@ function AboutUs() {
                     <div className="row mb-5">
                         <div className="col-md-4 mb-4">
                             <img
-                                src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
+                                src="/img/1_20240212_220236_0000-removebg-preview (1).png"
                                 alt="Visi Kami"
                                 className="img-fluid rounded-3 shadow-sm"
                             />
@@ -39,7 +39,7 @@ function AboutUs() {
                         </div>
                         <div className="col-md-4 mb-4">
                             <img
-                                src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
+                                src="/img/C01.png"
                                 alt="Misi Kami"
                                 className="img-fluid rounded-3 shadow-sm"
                             />
@@ -50,7 +50,7 @@ function AboutUs() {
                     <div className="row mb-5">
                         <div className="col-md-4 mb-4">
                             <img
-                                src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
+                                src="/img/Simpel retro media logo.png"
                                 alt="Lingkar Pena Pelajar"
                                 className="img-fluid rounded-3 shadow-sm"
                             />
@@ -64,93 +64,15 @@ function AboutUs() {
                     </div>
 
                     {/* Struktur Organisasi */}
-                    <div className="row mb-5">
-                        <h3 className="text-center mb-4">Struktur Organisasi</h3>
-                        <div id="orgCarousel" className="carousel slide" data-bs-ride="carousel">
-                            <div className="carousel-inner text-center">
-                                <div className="carousel-item active">
-                                    <img
-                                        src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
-                                        className="d-inline-block"
-                                        alt="Struktur 1"
-                                        style={{
-                                            width: '40%',
-                                            height: 'auto',
-                                            objectFit: 'cover',
-                                            transition: 'transform 0.5s ease',
-                                        }}
-                                    />
-                                </div>
-                                <div className="carousel-item">
-                                    <img
-                                        src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
-                                        className="d-inline-block"
-                                        alt="Struktur 2"
-                                        style={{
-                                            width: '40%',
-                                            height: 'auto',
-                                            objectFit: 'cover',
-                                            transition: 'transform 0.5s ease',
-                                        }}
-                                    />
-                                </div>
-                                <div className="carousel-item">
-                                    <img
-                                        src="/img/harlahpn39-0c3ec569-96bd-44bd-a076-736dd7e5511f.jpg"
-                                        className="d-inline-block"
-                                        alt="Struktur 3"
-                                        style={{
-                                            width: '40%',
-                                            height: 'auto',
-                                            objectFit: 'cover',
-                                            transition: 'transform 0.5s ease',
-                                        }}
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Tombol Navigasi */}
-                            <button
-                                className="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#orgCarousel"
-                                data-bs-slide="prev"
-                            >
-                                <span
-                                    className="carousel-control-prev-icon"
-                                    aria-hidden="true"
-                                    style={{ color: 'black', fontSize: '24px' }}
-                                >
-                                    <i className="bi bi-arrow-left-circle"></i>
-                                </span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button
-                                className="carousel-control-next"
-                                type="button"
-                                data-bs-target="#orgCarousel"
-                                data-bs-slide="next"
-                            >
-                                <span
-                                    className="carousel-control-next-icon"
-                                    aria-hidden="true"
-                                    style={{ color: 'black', fontSize: '24px' }}
-                                >
-                                    <i className="bi bi-arrow-right-circle"></i>
-                                </span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
 
                     {/* Kontak dengan Ikon WhatsApp dan Instagram */}
                     <div className="text-center mt-5">
                         <h4>Hubungi Kami</h4>
                         <div className="d-flex justify-content-center">
-                            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="btn btn-success mx-2">
+                            <a href="https://wa.me/+6285749731625" target="_blank" rel="noopener noreferrer" className="btn btn-success mx-2">
                                 <i className="fab fa-whatsapp"></i> WhatsApp
                             </a>
-                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="btn btn-danger mx-2">
+                            <a href="https://www.instagram.com/pelajarnu_glenmore" target="_blank" rel="noopener noreferrer" className="btn btn-danger mx-2">
                                 <i className="fab fa-instagram"></i> Instagram
                             </a>
                         </div>
